@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="e-banking" duration-ms="49629" started-at="2021-10-14T18:39:03Z" finished-at="2021-10-14T18:39:53Z">
+    <groups>
+    </groups>
+    <test name="Banking Test" duration-ms="49629" started-at="2021-10-14T18:39:03Z" finished-at="2021-10-14T18:39:53Z">
+      <class name="com.E_bankingTestCases.Tc_LoginTest_003">
+        <test-method status="PASS" signature="Setup(java.lang.String)[pri:0, instance:com.E_bankingTestCases.Tc_LoginTest_003@20322d26]" name="Setup" is-config="true" duration-ms="4657" started-at="2021-10-15T00:09:04Z" finished-at="2021-10-15T00:09:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="addNewCustomer()[pri:0, instance:com.E_bankingTestCases.Tc_LoginTest_003@20322d26]" name="addNewCustomer" duration-ms="43958" started-at="2021-10-15T00:09:08Z" finished-at="2021-10-15T00:09:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewCustomer -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.E_bankingTestCases.Tc_LoginTest_003@20322d26]" name="TearDown" is-config="true" duration-ms="846" started-at="2021-10-15T00:09:52Z" finished-at="2021-10-15T00:09:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.E_bankingTestCases.Tc_LoginTest_003 -->
+    </test> <!-- Banking Test -->
+  </suite> <!-- e-banking -->
+</testng-results>
