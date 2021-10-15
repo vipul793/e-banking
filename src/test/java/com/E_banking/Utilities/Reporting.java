@@ -24,9 +24,11 @@ public class Reporting extends TestListenerAdapter{
 	public ExtentTest logger;
 
 	public void onStart(ITestContext testContext) {
+		System.setProperty("org.freemarker.loggerLibrary", "none");
+
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp statement.
 		String resName = "Test-Report-" + timestamp + ".html";
-		htmlReporter = new ExtentHtmlReporter("D:\\e-banking\\test-output" + resName); // location
+		htmlReporter = new ExtentHtmlReporter("D:\\e-banking\\TestReports\\Htmlreports" + resName); // location
 															// "./test-												// path to
 																											// store the
 																											// report
@@ -47,6 +49,7 @@ public class Reporting extends TestListenerAdapter{
 	}
 
 	public void onTestSuccess(ITestResult tr) {
+		
 		logger = extentRep.createTest(tr.getName()); // create each passed test new entry in the report
 		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN)); // Send the passed
 																							// information to the report
