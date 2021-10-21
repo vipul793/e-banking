@@ -1,5 +1,6 @@
 package com.E_bankingTestCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.E_bankingPageObject.AddNewCustomer;
 import com.E_bankingPageObject.BaseClass;
@@ -12,8 +13,12 @@ public class Tc_LoginTest_003 extends BaseClass {
 	public void addNewCustomer() throws InterruptedException {
 		ac = new AddNewCustomer(driver);
 		ac.verifyLogo();
+		Assert.assertTrue(ac.verifyLogo(), "logo is present");
 		ac.setUsername();
+	    logger.info("Username passed");
+
 		ac.setPassword();
+		logger.info("password passed");
 		ac.clickLogin();
 		ac.selectNewCustomer();
 		ac.CustomerName("Vipul");

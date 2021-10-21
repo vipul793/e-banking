@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class AddNewCustomer {
 	WebDriver driver;
@@ -50,6 +51,7 @@ public class AddNewCustomer {
 	WebElement newCustomer;
 
 	public void selectNewCustomer() {
+		Assert.assertTrue(newCustomer.isDisplayed(), "New customer is displayed");
 		newCustomer.click();
 	}
 

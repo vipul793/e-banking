@@ -24,7 +24,7 @@ public class Reporting extends TestListenerAdapter{
 	public ExtentTest logger;
 
 	public void onStart(ITestContext testContext) {
-		System.setProperty("org.freemarker.loggerLibrary", "none");
+	
 
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp statement.
 		String resName = "Test-Report-" + timestamp + ".html";

@@ -33,7 +33,6 @@ public class BaseClass {
 
 		logger = Logger.getLogger("eBanking");
 		PropertyConfigurator.configure("D:\\e-banking\\target\\log4j.properties");
-		System.setProperty("org.freemarker.loggerLibrary", "none");
 		if (br.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
 			driver = new ChromeDriver();
