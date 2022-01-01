@@ -20,8 +20,12 @@ public class ReadConfigure {
 		}
 	}
 
-	public String getApplicationUrl() {
+/*	public String getApplicationUrl() {
 		String url = prop.getProperty("baseUrl");
+		return url;
+	}*/
+	public String getApplicationUrl() {
+		String url = prop.getProperty("url");
 		return url;
 	}
 

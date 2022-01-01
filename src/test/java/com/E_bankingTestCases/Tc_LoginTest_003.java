@@ -23,12 +23,14 @@ public class Tc_LoginTest_003 extends BaseClass {
 		ac.selectNewCustomer();
 		ac.CustomerName("Vipul");
 		Thread.sleep(5000);
-		ac.selectGender("f");
+		ac.selectGender("m");
 		Thread.sleep(5000);
 		ac.selectdate("15-10-2021");
 		ac.inputAddress("Pune");
+		ac.selectState("Maharashtra");
+		ac.selectPin("412307");
 		
-		ac.verifyLinkActive("http://demo.guru99.com/v4/manager/Managerhomepage.php");
-		ac.verifyLinks();
+//	ac.verifyLinkActive("http://demo.guru99.com/v4/manager/Managerhomepage.php");
+	// ac.verifyLinks();
 	}
 }

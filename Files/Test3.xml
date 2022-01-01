@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="e-banking">
+<suite name="e-banking" parallel="classes">
 	<listeners>
 	<listener class-name="com.E_banking.Utilities.Reporting"/>
 	</listeners>
@@ -8,8 +8,9 @@
 	<test name="Banking Test">
 		<parameter name="browser" value="chrome"/>
 		<classes>
-		<class name="com.E_bankingTestCases.Tc_LoginTest_003">
-		</class> 
+		<!-- <class name="com.E_bankingTestCases.Tc_LoginTest_001"/> -->
+		<!-- <class name="com.E_bankingTestCases.Tc_LoginTest_002"/> -->
+		<class name="com.E_bankingTestCases.Tc_LoginTest_003"/>
 		</classes>
 	</test>
 </suite>

@@ -30,14 +30,14 @@ public class AddNewCustomer {
 	WebElement setusername;
 
 	public void setUsername() {
-		setusername.sendKeys("mngr357958");
+		setusername.sendKeys("mngr365881");
 	}
 
 	@FindBy(name = "password")
 	WebElement setpassword;
 
 	public void setPassword() {
-		setpassword.sendKeys("rypabEz");
+		setpassword.sendKeys("jYmebUz");
 	}
 
 	@FindBy(name = "btnLogin")
@@ -47,7 +47,7 @@ public class AddNewCustomer {
 		Loginbtn.click();
 	}
 
-	@FindBy(xpath = "//a[text()='New Customer']")
+	@FindBy(xpath ="//a[text()='New Customer']")
 	WebElement newCustomer;
 
 	public void selectNewCustomer() {
@@ -71,11 +71,7 @@ public class AddNewCustomer {
 
 				genderList.get(i).click();
 				break;
-			} else {
-				if (genderList.get(i).getAttribute("value").equals(gender)) {
-					genderList.get(i).click();
 
-				}
 			}
 		}
 	}
@@ -140,6 +136,18 @@ public class AddNewCustomer {
 
 		}
 
+	}
+	@FindBy(name="state")
+	WebElement state;
+	
+	public void selectState(String value) {
+		state.sendKeys(value);
+	}
+	@FindBy(name="pinno")
+	WebElement pin;
+	
+	public void selectPin(String pincodeNumber) {
+		pin.sendKeys(pincodeNumber);
 	}
 
 }

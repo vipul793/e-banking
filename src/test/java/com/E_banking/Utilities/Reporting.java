@@ -26,8 +26,8 @@ public class Reporting extends TestListenerAdapter{
 	public void onStart(ITestContext testContext) {
 	
 
-		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp statement.
-		String resName = "Test-Report-" + timestamp + ".html";
+		String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date());
+		String resName = "TestReport_" + timestamp + ".html";
 		htmlReporter = new ExtentHtmlReporter("D:\\e-banking\\TestReports\\Htmlreports" + resName); // location
 															// "./test-												// path to
 																											// store the
@@ -58,7 +58,7 @@ public class Reporting extends TestListenerAdapter{
 	public void onTestFailure(ITestResult tr) {
 		logger = extentRep.createTest(tr.getName()); // crate each failed test entry in the report
 		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED));
-		String ScreenshotPath = System.getProperty("user.dir") + ".\\Screenshots" + tr.getName() + ".png";
+		String ScreenshotPath = System.getProperty("user.dir") + ".\\ScreenShots\\" + tr.getName() + ".png";
 
 		File f = new File(ScreenshotPath);
 		if (f.exists()) {

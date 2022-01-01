@@ -6,7 +6,7 @@ import com.E_bankingPageObject.LoginPage;
 public class Tc_LoginTest_001 extends BaseClass {
 
 	@Test
-	public void loggerinTest() {
+	public void loginTest() {
 		
 		logger.info("Url is opened");
 		

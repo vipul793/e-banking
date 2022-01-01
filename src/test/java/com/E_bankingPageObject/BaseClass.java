@@ -18,6 +18,8 @@ import org.testng.annotations.Parameters;
 
 import com.E_banking.Utilities.ReadConfigure;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 	ReadConfigure readconfig = new ReadConfigure();
 
@@ -34,7 +36,8 @@ public class BaseClass {
 		logger = Logger.getLogger("eBanking");
 		PropertyConfigurator.configure("D:\\e-banking\\target\\log4j.properties");
 		if (br.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
+		//	System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (br.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", readconfig.getFirefox());
@@ -54,7 +57,7 @@ public class BaseClass {
 	public void captureScreen(WebDriver driver,String Tname) {
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		File target=new File(".\\Screenshots\\"+Tname+".png");
+		File target=new File(".\\ss\\"+Tname+".png");
 		try {
 			FileUtils.copyFile(src, target);
 		} catch (IOException e) {

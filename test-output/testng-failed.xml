@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [e-banking]" parallel="classes">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.E_banking.Utilities.Reporting"/>
+  </listeners>
+  <test name="Banking Test(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.E_bankingTestCases.Tc_LoginTest_003">
+      <class name="com.E_bankingTestCases.Tc__04">
         <methods>
-          <include name="addNewCustomer"/>
+          <include name="TearDown"/>
+          <include name="test"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- com.E_bankingTestCases.Tc_LoginTest_003 -->
+      </class> <!-- com.E_bankingTestCases.Tc__04 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Banking Test(failed) -->
+</suite> <!-- Failed suite [e-banking] -->
